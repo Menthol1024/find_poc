@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		{% load staticfiles %}
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link href='#' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.2.0/css/font-awesome.min.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/component.css' %}" />
+		<!--[if IE]>
+  		<script src="#"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar clearfix">
+				<nav>
+					<a href="#"><i class="fa fa-fw fa-comments-o"></i></a>
+					<a href="#"><i class="fa fa-fw fa-heart-o"></i></a>
+					<a href="#"><i class="fa fa-fw fa-send-o"></i></a>
+					<a href="#"><i class="fa fa-fw fa-smile-o"></i></a>
+				</nav>
+			</aside>
+			<div id="morphsearch" class="morphsearch">
+				<form class="morphsearch-form" action="{% url 'haystack_search'  %}">
+					         <input  type="hidden" name="modelsf" value="indpoc.poc">
+
+                    <input class="morphsearch-input" type="search" placeholder="Search..." name="q"/>
+					<button class="morphsearch-submit" type="submit">Search</button>
+				</form>
+				<div class="morphsearch-content">
+					<div class="dummy-column">
+						<h2>People</h2>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{% static 'img/thumbs/head1.jpg' %}" alt="Sara Soueidan"/>
+							<h3>Sara Soueidan</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{%static 'img/thumbs/head2.jpg'%}" alt="Rachel Smith"/>
+							<h3>Rachel Smith</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{%static 'img/thumbs/head3.jpg'%}" alt="Peter Finlan"/>
+							<h3>Peter Finlan</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{%static 'img/thumbs/head4.jpg'%}" alt="Patrick Cox"/>
+							<h3>Patrick Cox</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{%static 'img/thumbs/head5.jpg'%}" alt="Tim Holman"/>
+							<h3>Tim Holman</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img class="round" src="{%static 'img/thumbs/head6.jpg'%}" alt="Shaun Dona"/>
+							<h3>Shaun Dona</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Popular</h2>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/2.jpg'%}" alt="colpick-jQuery颜色选择器插件"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/3.jpg'%}" alt="jquery和css3方向感知鼠标滑过图片遮罩效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/4.jpg'%}" alt="jQuery炫酷3d画廊"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/5.jpg'%}" alt="炫酷jQuery鼠标滑过图片3d折叠效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/6.jpg'%}" alt="模拟iphone面板折叠的css3折叠效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/7.jpg'%}" alt="10种使用css3的画廊图片切换3d翻转效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+					</div>
+					<div class="dummy-column">
+						<h2>Recent</h2>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/1.jpg'%}" alt="html5 svg动感摇摆页面切换效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/8.jpg'%}" alt="制作HTML5 SVG页面预加载效果"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/9.jpg'%}" alt="使用JQUERY制作3D画廊房间"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/10.jpg'%}" alt="使用CSS3制作响应式网格布局"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/11.jpg'%}" alt="用HTML5和CSS3制作神奇的TOOLTIP样式"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+						<a class="dummy-media-object" href="#">
+							<img src="{%static 'img/thumbs/12.jpg'%}" alt="SLICEBOX-3D幻灯片插件介绍"/>
+							<h3>正在加班加点！！</h3>
+						</a>
+					</div>
+				</div><!-- /morphsearch-content -->
+				<span class="morphsearch-close"></span>
+			</div><!-- /morphsearch -->
+			<header class="codrops-header">
+				<h1>Find POC <span>A search input that morphs into a fullscreen search page.</span></h1>
+			</header>
+			<div class="overlay"></div>
+		</div><!-- /container -->
+		<script src="{%static 'js/classie.js' %}"></script>
+		<script>
+			(function() {
+				var morphSearch = document.getElementById( 'morphsearch' ),
+					input = morphSearch.querySelector( 'input.morphsearch-input' ),
+					ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
+					isOpen = isAnimating = false,
+					// show/hide search area
+					toggleSearch = function(evt) {
+						// return if open and the input gets focused
+						if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+						var offsets = morphsearch.getBoundingClientRect();
+						if( isOpen ) {
+							classie.remove( morphSearch, 'open' );
+
+							// trick to hide input text once the search overlay closes 
+							// todo: hardcoded times, should be done after transition ends
+							if( input.value !== '' ) {
+								setTimeout(function() {
+									classie.add( morphSearch, 'hideInput' );
+									setTimeout(function() {
+										classie.remove( morphSearch, 'hideInput' );
+										input.value = '';
+									}, 300 );
+								}, 500);
+							}
+							
+							input.blur();
+						}
+						else {
+							classie.add( morphSearch, 'open' );
+						}
+						isOpen = !isOpen;
+					};
+
+				// events
+				input.addEventListener( 'focus', toggleSearch );
+				ctrlClose.addEventListener( 'click', toggleSearch );
+				// esc key closes search overlay
+				// keyboard navigation events
+				document.addEventListener( 'keydown', function( ev ) {
+					var keyCode = ev.keyCode || ev.which;
+					if( keyCode === 27 && isOpen ) {
+						toggleSearch(ev);
+					}
+				} );
+
+
+				/***** for demo purposes only: don't allow to submit the form *****/
+				// morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+			})();
+		</script>
+	</body>
+</html>

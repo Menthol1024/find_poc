@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}
+提交poc
+{% endblock %}
+{% block javascript %}
+    <script>
+       layui.use('form', function(){
+    var form = layui.form;
+
+  //监听提交
+
+
+});
+    </script>
+{% endblock %}
+{% block body %}
+<div class="layui-container">
+
+  <div class="layui-row">
+    <div class="layui-col-md9">
+        <button class="layui-btn layui-btn-normal"><a href="{% url 'index' %}">首页</a></button>
+    </div>
+    <div class="layui-col-md3">
+      <button class="layui-btn layui-btn-normal" style="float:right">返回</button>
+    </div>
+  </div>
+</div>
+<div class="layui-container">
+
+  <div class="layui-row">
+    <div class="layui-col-md9">
+<div class="site-title">
+      <h2 class="layui-colla-title" >提交poc</h2>
+</div>
+<form class="layui-form" action="{% url 'upload' %}" method="post" >
+{% csrf_token %}
+    {% for item in form %}
+        {% if  forloop.last %}
+
+            <div class="layui-form-item layui-form-text">
+     <label class="layui-form-label">{{ item.label }}</label>
+    <div class="layui-input-block">
+      <textarea name="desc" placeholder="" class="layui-textarea"></textarea>
+    </div>
+  </div>
+        {% else %}
+    <div class="layui-form-item">
+    <label class="layui-form-label">{{ item.label }}</label>
+    <div class="layui-input-block">
+      <input type="{{ item.field.widget.input_type }}"  id="{{item.id_for_label}}" name="{{item.html_name}}" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+        {% endif %}
+        {% endfor %}
+  <div class="layui-form-item">
+
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="pocform">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+    </div>
+
+      <div class="layui-col-md3">
+
+    </div>
+  </div>
+</div>
+{% endblock %}

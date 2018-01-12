@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %} findpoc{% endblock %}
+
+{% load staticfiles%}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'img/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="s_body" >
+     <div class="logo"></div>
+
+
+<script type="text/javascript">
+function subck(){
+	var wd = document.getElementById("wd").value;
+	if(wd=='' || q=='请输入关键字搜索网页'){return false;}else{return true;}
+}/*mian7.7*/
+function toptab(obj,id){
+	$(".hothead a").removeClass("current");
+	$("#tab"+id).addClass("current");
+    $(".hotsearch ul").hide();
+	$("#toplist"+id).show();
+}
+$(document).ready(function() {
+	var WinH = $(window).height();
+    var offset = $('#footer').offset();
+	if(WinH>offset.top+$('#footer').height()){
+		var MH = WinH-offset.top-$('#footer').height()+19;
+		$('#footer').css("margin-top",MH.toString()+"px");
+
+	}
+    $('#footer').css("visibility","visible");
+
+});
+</script>
+
+
+     <form  id="Searchword" name="f" action="{% url 'haystack_search'  %}"  class="form" accept-charset="utf-8" method="get" >
+       {% csrf_token %}
+         <input  placeholder="用眼睛发现世界，用手打开世界..." type="text"  name="q" value="" class="s_s">
+         <input  type="hidden" name="modelsf" value="indpoc.poc">
+       <input type="submit" name="" value="" class="s_buttom">
+     </form>
+
+
+</div>
+
+
+<div class="rec">
+    <div class="rec_t">
+      <span style="color:#FFFFFF">热门搜索：</span>
+
+
+  {% for url in search %}
+      <a target="_blank" href="{{ url.get_url }}">{{ url.package }}</a>
+  {% endfor %}
+
+
+
+<td>
+
+</a>&nbsp;&nbsp;
+</td>
+
+
+
+
+    </div>
+
+</div>
+{% endblock %}
+

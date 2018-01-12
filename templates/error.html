@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>没有权限</title>
+    <script src="../layui/layui.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script>
+//Demo
+        layui.use('form', function(){
+            var form = layui.form;
+
+            //监听提交
+          //  form.on('submit(formDemo)', function(data){
+            //    layer.msg(JSON.stringify(data.field));
+              //  return false;
+            //});
+        });
+    </script>
+    <script>
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            layer.open({
+                content:'此poc需要对话'
+                ,btn: ['输入兑换码', '返回首页']
+                ,yes: function(index, layero){
+                    layer.open({
+                         btn:['确认', '返回首页'],
+                        content:'<form class="layui-form" action="/poc/{{ code }}" method="post" id="code"> \
+                    <div class="layui-form-item">\
+                        <label class="layui-form-label">兑换码</label>\
+                       <div class="layui-input-block">\
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入兑换码" class="layui-input" >\
+                        </div>\
+                    </div>\
+                </form>\
+               '
+                        ,yes: function(index, layero){
+                            document.getElementById("code").submit();
+
+                        }
+
+                        ,btn2: function(index, layero){
+                            //按钮【按钮二】的回调
+                            window.location.href='{% url 'index' %}';
+                            //return false 开启该代码可禁止点击该按钮关闭
+                        }
+                    }
+
+                )
+
+                }
+                ,btn2: function(index, layero){
+                    //按钮【按钮二】的回调
+                    window.location.href='{% url 'index' %}';
+                    //return false 开启该代码可禁止点击该按钮关闭
+                }
+
+
+        })});
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

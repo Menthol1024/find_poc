@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block css %}
+    <style>
+        .layui-colla-title{
+            color:#5FB878;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+<div class="layui-container">
+
+  <div class="layui-row">
+    <div class="layui-col-md9">
+      <button class="layui-btn layui-btn-normal">首页</button>
+    </div>
+    <div class="layui-col-md3">
+      <button class="layui-btn layui-btn-normal" style="float: right">返回</button>
+    </div>
+  </div>
+</div>
+<div class="layui-container">
+  <div class="layui-row ">
+    <div class="layui-col-md9">
+        <div class="layui-collapse" style="color: #5FB878">
+            <div >
+                <h2 class="layui-colla-title" >漏洞编号</h2>
+    <div class="layui-colla-content layui-show">{{ poc.code }}</div>
+  </div>
+  <div >
+    <h2 class="layui-colla-title" >作者</h2>
+    <div class="layui-colla-content layui-show">{{ poc.another }}</div>
+  </div>
+     <div >
+    <h2 class="layui-colla-title" >影响组件</h2>
+    <div class="layui-colla-content layui-show">{{ poc.package }}</div>
+  </div>
+    <div >
+    <h2 class="layui-colla-title">版本号</h2>
+    <div class="layui-colla-content layui-show">{{ poc.version }}</div>
+  </div>
+
+</div>
+         </div>
+    <div class="layui-col-md3">
+             <div class="layui-collapse">
+<div>
+     <div class="layui-colla-item">
+    <h2 class="layui-colla-title">漏洞类型</h2>
+    <div class="layui-colla-content layui-show">{{ poc.bugtype }}</div>
+  </div>
+    <div class="layui-colla-item">
+    <h2 class="layui-colla-title">详情</h2>
+    <div class="layui-colla-content layui-show">{{ poc.desc }}</div>
+  </div>
+</div>
+    </div>
+  </div>
+
+<script>
+//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+
+});
+</script>
+{% endblock %}

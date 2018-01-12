@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ msg }}
+{% endblock %}
+{% block javascript %}
+<script>
+    layui.use('layer', function(){
+  var layer = layui.layer;
+
+ layer.open({
+  content: '{msg}',
+  yes: function(index, layero){
+    window.location.href="{{ url }}";
+    layer.close(index); //如果设定了yes回调，需进行手工关闭
+  }
+});})
+</script>
+{% endblock %}

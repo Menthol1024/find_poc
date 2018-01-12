@@ -1,0 +1,13 @@
+{% load i18n admin_urls %}
+<div class="submit-row">
+<input type="submit" value="{% trans '保存' %}" class="default" name="_save" />
+{% if show_delete_link %}
+    {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+    <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" class="deletelink">{% trans "拒绝并删除" %}</a></p>
+{% endif %}
+<button class="layui-btn" ><a href="{{ url }}/0/audit/">{% trans '通过' %}</a></button>
+<button class="layui-btn" ><a href="{{ url }}/1/audit/">{% trans '通过(收费)' %}</a></button>
+
+
+
+</div>

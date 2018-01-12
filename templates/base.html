@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% load staticfiles %}
+     <script src="{% static 'layui/layui.js' %}"></script>
+     <link rel="stylesheet" href="{% static 'layui/css/layui.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    {% block javascript %}{% endblock %}
+{% block css %}{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+    <title>审核poc</title>
+    <script src="../layui/layui.js"></script>
+     <link rel="stylesheet" href="../layui/css/layui.css">
+    <script>
+       layui.use('form', function(){
+    var form = layui.form;
+
+  //监听提交
+
+});
+    </script>
+</head>
+<body>
+
+<div class="layui-container">
+
+  <div class="layui-row">
+    <div class="layui-col-md9">
+      <button class="layui-btn layui-btn-normal">首页</button>
+    </div>
+    <div class="layui-col-md3">
+      <button class="layui-btn layui-btn-normal" style="float:right">返回</button>
+    </div>
+  </div>
+</div>
+<div class="site-title">
+      <h2 class="layui-colla-title" >审核poc</h2>
+</div>
+<div class="layui-container">
+
+    <div class="layui-row">
+        <div class="layui-col-md10">
+<form class="layui-form" action="./achieve.php" method="post" >
+
+<div class="layui-form-item">
+    <label class="layui-form-label">POC编号</label>
+    <div class="layui-input-block">
+    <?php echo '<input type="text" name="poc_n" required  lay-verify="required" value="'.$poc_N.'" autocomplete="off" class="layui-input">'; ?>  
+    </div>
+    </div>
+    <div class="layui-form-item">
+    <label class="layui-form-label">影响组件</label>
+    <div class="layui-input-block">
+    <?php
+      echo ' <input type="text" name="zujian" required  lay-verify="required" value="'.$res1['zujian'].'" autocomplete="off" class="layui-input"></div></div>';
+    ?>
+    <div class="layui-form-item">
+        <label class="layui-form-label">影响版本</label>
+        <div class="layui-input-block">
+             <input type="text" name="version" required lay-verify="required" value="<?php echo $res1['version'];?>"
+                       autocomplete="off" class="layui-input">
+        </div>
+
+        <label class="layui-form-label">影响类型</label>
+        <div class="layui-input-block">
+            <input type="text" name="leixing" required lay-verify="required" placeholder="比如SQL注入" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+    <label class="layui-form-label">昵称</label>
+    <div class="layui-input-block">
+      <input type="text" name="name" required  lay-verify="required" value="<?php echo $res1['name'];?>" autocomplete="off" class="layui-input">
+    </div>
+  </div><div class="layui-form-item">
+    <label class="layui-form-label">邮箱</label>
+    <div class="layui-input-block">
+      <input type="text" name="mail" required  lay-verify="required" value="<?php echo $res1['mail'];?>" autocomplete="off" class="layui-input" style="width: 80%;float: left;" >
+        <button class="layui-btn layui-btn-normal" style="float:right">获取兑换码</button>
+    </div>
+  </div>
+
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">POC详情</label>
+    <div class="layui-input-block">
+      <textarea name="desc" class="layui-textarea"><?php echo $res1['descs'];?></textarea>
+    </div>
+  </div>
+  <input type="hidden" name="id" value="<?php echo $res1['poc_id']; ?>">
+    <div class="layui-form-item">
+        <label class="layui-form-label">是否免费开放</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="switch" lay-skin="switch">
+        </div>
+    </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="pocform">审核通过</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+        </div>
+        <div class="layui-col-md2">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
