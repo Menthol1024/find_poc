@@ -1,0 +1,171 @@
+﻿*{margin:0px;padding:0px;font-family:'微软雅黑';}
+body{width:100%; height:100%; overflow:hidden; background:url(bj.jpg) no-repeat; background-size:100%; }
+.img{
+	width:528px;
+	height:280px;}
+.nav{
+	width:100%;
+	height:33px;
+	background-color:#161412;
+	position:absolute;
+	top:0;
+	}
+.nav_left{
+	margin-left:40px;
+	height:33px;
+	line-height:33px;
+	font-size:14px;
+	float:left;
+	
+}
+.nav_right{
+	margin-right:40px;
+	height:33px;
+	line-height:33px;
+	font-size:14px;
+	float:right;
+	
+}
+
+li{
+	float:left;
+	list-style:none;
+	margin-right:10px;
+	}
+a{
+	color:#D8D0D1;
+	}
+li a:hover{ 
+    color:#EC4CBE;   
+    list-style:none;
+}
+/*--------------------------------------*/
+
+.logo{
+	width:120px;
+	height:50px;
+	background:url(logo.png) no-repeat;
+	float:left;
+	margin-top:-10px;
+	margin-left:45px;
+	background-size:120px 50px;}
+
+.s_body{
+	width:800px;
+	height:100px;
+ 
+	margin:50px auto;
+	}
+.s_s{
+	margin-left:20px;
+	height:38px;
+	width:528px;
+	border:1px #4E48EC solid;
+	padding-left:8px;
+	color:#110404;
+	float:left;
+        outline:none;
+        border-right-width:0px;
+	}
+.s_s:focus{
+	border-color:#4E48EC;}
+.s_buttom{
+	background:#AE7DB1 url(s.png) no-repeat ;
+	background-size:65% 65%;
+	background-position:50% 50%;
+	width:38px;
+	height:39.5px;
+	float:left;
+	border:0;
+	outline:0;
+	}
+input{color:#000000;}
+
+.s_buttom:hover{background-color:#610C84;}		
+		
+.c{
+	width:800px;
+	height:395px;
+	margin:0 auto;
+	}
+	
+.c_l{
+	border:1px #B9B9B9 solid;
+	width:528px;
+	height:320px;
+	background:#FFFFFF;
+	margin-left:190px;
+	float:left;
+	}	
+	
+.c_r{
+	border:1px #B9B9B9 solid;
+	width:300px;
+	height:320px;
+	background:#ffffff;
+	margin-left:200px;
+	float:left;
+	}
+	
+.c_r_top{
+	font-size:16px;
+	color:#E81161;
+	
+	width:100%;
+	margin:10px auto 10px 10px;
+	}
+	
+.c_r_hr{
+	border-bottom:1px #B9B9B9 solid;
+	}
+.c_r_txt{
+	width:100%;
+	height:auto;
+	margin-left:25px;
+	clear:both;
+	margin-top:10px;
+	}
+.c_r_txt li{
+	clear:both;
+	margin-bottom:5px;}			
+.c_r_txt a{
+	color:#E11014;
+	}		
+.rec{
+	width:800px;
+	height:50px;
+	margin:0 auto;
+	}	
+.rec_t{ 
+	margin-left:200px;
+	height:38px;
+	line-height:38px;
+	color:#EF366A;
+	margin-top:-50px;}
+
+/*bottom*/
+.nav_btm{
+	width:800px;
+	height:38px;
+	line-height:38px;
+	background:;
+	bottom:0;
+	z-index:3;
+	position:absolute;
+	
+    }
+.btm_txt{
+	color:#D8D0D1;
+	font-size:12px;
+	margin-left:200px;
+
+	float:left;
+	}
+.btm_l{
+	float:left;
+	font-size:12px;
+	margin-left:30px;
+	}	
+	
+
+
